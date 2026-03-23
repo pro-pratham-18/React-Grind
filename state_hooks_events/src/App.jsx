@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
+import { useEffect } from 'react'
 
 import prathamesh2 from "./assets/prathamesh2.jpg"
+import Loginbtn from './components/Loginbtn'
+import Logoutbtn from './components/Logoutbtn'
 
 // image passing using props (parent)
 // const App= () => {
@@ -66,9 +69,7 @@ import prathamesh2 from "./assets/prathamesh2.jpg"
 
 
 //
-// const App = () => {
-//     const [isloggedIn,setloggedIn] =useState(false);
-
+// const App = 
 //     using if -else 
 
 //     if (isloggedIn) {
@@ -91,6 +92,8 @@ import prathamesh2 from "./assets/prathamesh2.jpg"
 //     )
 
 //     using logical operators(return ke andar , aur if bahar ) 
+
+//     const [isloggedIn,setloggedIn] =useState(false);
 
 //     if(!isloggedIn){
 //         return(
@@ -193,7 +196,7 @@ import prathamesh2 from "./assets/prathamesh2.jpg"
 //   )
 // }
 
-export default App
+
 
 
 
