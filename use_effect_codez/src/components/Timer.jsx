@@ -12,7 +12,7 @@ const Timer = () => {
         }, 2000);
 
     return () => {
-        clearInterval(intervalId);
+        clearInterval(intervalId);   // used for cleanup , though not getting used here 
         console.log("stopped and cleaned");
       }
     },[])
