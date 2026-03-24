@@ -1,3 +1,5 @@
 Use 'npm install' command inorder to run these react vite projects when cloning these project directories as they do not contain node modules.
 also prefer installing tailwindcss using command 'npm install tailwindcss @tailwindcss/vite' as some of the projects contain styling using tailwind.
-make sure to include plugins of twailwindcss as these dont conatin tailwind plugins .
+make sure to include plugins of twailwindcss as these dont conatin tailwind plugins 
+
+
