@@ -35,5 +35,37 @@ import Timer from './components/Timer'
 
 //--------------------------------------------------------------------------------------------------------
 
-export default App
+// appcode for count component ,(vanishing and inacarnating the timer using conditional rendering)
+
+// import React, { useState } from 'react'
+// import Count from '../../React-Grind/use_effect_codez/src/components/Count'
+
+
+// const App = () => {
+//   const [active,setactive]=useState(true);
+
+//   function handleclick(){
+//     setactive(!active)
+//   }
+//   return (
+//     <div>
+//       {active?(
+//         <input type="button" value="Vanish" className='border' onClick={handleclick}/>
+//       ):(
+//         <input type="button" value="Incarnate" className='border' onClick={handleclick} />
+//       )}
+//       {active && <Count/>}
+//     </div>
+//   )
+// }
+// // point - if the the state variable of the child component changes then its not must for parent component (let's say app here) to re-render
+// // but if state variable of the parent component changes then child component re-renders as well
+// export default App
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
