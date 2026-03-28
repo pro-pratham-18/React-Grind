@@ -12,8 +12,8 @@ import Courses from './components/Courses';
 import Reports from './components/Reports';
 import MockTests from './components/MockTests';
 
-import NotFound from './components/NotFound';
 
+import NotFound from './components/NotFound';
 
 const router =createBrowserRouter(                   // this contains a list , inside which there are routes 
     [
@@ -96,12 +96,16 @@ const App = () => {
     <div>
         <RouterProvider router={router}/>
     </div>
+  
   )
 }
 
 
 
 export default App
+
+
+
 
 
 
