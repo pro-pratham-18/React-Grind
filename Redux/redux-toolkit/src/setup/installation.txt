@@ -1,0 +1,126 @@
+Follow the instructions mentioned below in order to install and setup the redux-toolkit successfully.
+
+1) run the command <<   npm install @reduxjs/toolkit  >> 
+2) run the command << npm install react-redux >>
+
+3) create a folder named redux , create store.js inside it.
+4) import configureStore and create the store (in store.js) , by pasting following code:
+   
+import { configureStore } from '@reduxjs/toolkit'      // importing configureStore
+
+export const store = configureStore({          // creation of a store 
+    reducer: {}
+})
+
+5) import Provider and store in main.jsx, and wrap the app component inside the provider. like:
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+import { Provider } from 'react-redux'
+import { store } from './redux/store.js'
+
+createRoot(document.getElementById('root')).render(
+
+    <StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </StrictMode>,
+    )
+6) in src , make a features folder, inside it make your component in .jsx format , and paste this default slice syntax:
+
+import { createSlice } from '@reduxjs/toolkit'
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState:{
+    value:0
+  },
+  reducers: {
+    increment: (state) => {
+      state.value += 1
+    },  
+    decrement: (state) => {
+      state.value -= 1
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload
+    }
+  }
+})
+
+export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export default counterSlice.reducer
+
+7)register the reducer in the store , by adding adding this also in the store:
+
+import counterReducer from '../features/Counter/CounterSlice'
+
+add this inside the reducer wrap as well:
+
+counter: counterReducer
+
+final store.js will look like:
+
+import { configureStore } from '@reduxjs/toolkit'      // importing configureStore
+
+import counterReducer from '../features/Counter/CounterSlice'
+
+export const store = configureStore({          // creation of a store 
+    reducer: {
+        counter: counterReducer
+    }
+})
+
+// setup code of asyncthunk--------------------------------
+
+every thing is same just slice writing or the slice file is different------------
+
+1)paste this in async operation jsx file inside the features folder, and adjust , initialstate, actions , reducing function as per your choice:
+
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+
+
+const FetchTodos =createAsyncThunk("fetchtodos",async()=>{      //here, FetchTodos(variable) is called the action creator                     // the 3 actions are dispatched automatically as per the promise of the async function     
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+  return response.json();  // response.json() returns either resolved ,rejected  value of the promise or pendig promise.
+});
+
+const TodoSlice = createSlice({        // async-type slice
+  name: 'todo',                        // slice name 
+  initialState:{
+    isloading:false,
+    data:null,
+    isError:false
+  },
+  extraReducers:(builder)=>{
+    builder.addCase(FetchTodos.fulfilled,(state,action)=>{
+        state.isloading=false;
+        state.data=action.payload               // action.payload is the resolved value of promise of response.json (here)
+        console.log("data fetched successfully");
+    })
+    builder.addCase(FetchTodos.pending,(state,action)=>{
+        state.isloading=true;
+    })
+    builder.addCase(FetchTodos.rejected,(state,action)=>{
+        console.log("Error",action.error);  // action.payload is the rejected value of promise of response.json (here) , but we can use action.error here (best practice)
+        state.isError=true;           
+    })
+  }
+},
+);
+
+export {FetchTodos};
+export default TodoSlice.reducer
+
+2) well as the export of the slice is default, it can be imported by any name in store.js
+3) after importing in store.js register the reducer.
+
+
+4) the action creator we exported must be imported in app.jsx , in order to dispatch it.
+
+ 
+

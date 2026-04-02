@@ -28,12 +28,12 @@ const App = () => {
 
 // 1st use points :
 
-// when not used useRef, the valuevariable gets initialized with certain value(which we gave) everytime the UI re renders 
-// jaie useState me state variable change hone par UI re -render hota hai, useRef me state variable change hone par UI re -render NAHI HOTA HAI!!
-// means we can useRef perists its value or retains the updated value of its variable
+// when not used useRef, the value variable gets initialized with certain value(which we gave) everytime the UI re renders 
+// jaise useState me state variable change hone par UI re -render hota hai, useRef me state variable change hone par UI re -render NAHI HOTA HAI!!
+// means we can use useRef to perists its value or retains the updated value of its variable
 
 // 2nd use  points :
-// generally used when action is an element and we need to alter other element
+// generally used when action is in an element and we need to alter other element
 
 
 
