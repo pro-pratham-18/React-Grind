@@ -25,7 +25,7 @@ const TodoSlice = createSlice({        // async-type slice
     builder.addCase(FetchTodos.pending,(state,action)=>{
         state.isloading=true;
     })
-    builder.addCase(FetchTodos.rejected,(state,action)=>{
+    builder.addCase(FetchTodos.rejected ,(state,action)=>{
         console.log("Error",action.error);  // action.payload is the rejected value of promise of response.json (here) , but we can use action.error here (best practice)
         state.isError=true;           
     })
