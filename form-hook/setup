@@ -1,0 +1,6 @@
+1) just switch to your project directory , and paste the command , "npm instal react-hook-form"
+2) now , check node modules if it got installed or not 
+3) to use the form state hook , import it , like , 
+
+                  import { useForm } from "react-hook-form"
+

@@ -24,7 +24,6 @@ const App = () => {
     console.log("Middle Name: ",data.MiddleName);
     console.log("Last Name: ",data.LastName);
     console.log("Sbmitted");
-
   }
 
     const firstname=watch('FirstName');
@@ -34,7 +33,6 @@ const App = () => {
     return (
         <div className='bg-indigo-950 text-white'  >
             <form className='p-4' onSubmit={handleSubmit(Showdata)}>
-        
             <div className='flex gap-3'>
                 <label>First Name: </label>
                 <input type="text " className="text-white  border outline-none"{...register('FirstName',
