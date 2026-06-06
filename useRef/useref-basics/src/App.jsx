@@ -33,8 +33,7 @@ const App = () => {
 // means we can use useRef to perists its value or retains the updated value of its variable
 
 // 2nd use  points :
-// generally used when action is in an element and we need to alter other element
-
+// generally used when action is in an element and we need to alter other element , because to alter the same element we can uses the e.target thing , although useref will also work
 
 
 export default App

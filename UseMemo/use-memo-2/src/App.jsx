@@ -23,7 +23,7 @@ const App = () => {
                 Double:{double}
             </div>
 
-            <input type="number" placeholder="enter number" vlaue={input} onChange={(e)=>setInput(e.target.value)} className='border'/>
+            <input t ype="number" placeholder="enter number" vlaue={input} onChange={(e)=>setInput(e.target.value)} className='border'/>
         </div>
     )
 }
@@ -33,10 +33,5 @@ const App = () => {
 
 
 export default App
-
-
-
-
-
 
 

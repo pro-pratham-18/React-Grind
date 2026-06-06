@@ -16,7 +16,6 @@ const ExpComp = () => {
         return result;
     },[])
 
-
     useEffect(()=>{
         if(previousFunction.current){
             if(previousFunction.current=== ExpCalc){
@@ -48,9 +47,10 @@ const ExpComp = () => {
 export default ExpComp
 
 
+
 //we use useCallback to prevent a function from re-declaration or re-run when ui re-renders
 //we use Usememo to prevent a function from re-run or re-compute when ui-re renders
-// when using only useCallback , re-run of the always happens when ui re-renders
+// when using only useCallback , re-run of the always happens when ui re-renders 
 // when using only useMemo , re-cration of the function always happens when ui re-renders
 
 //usecallback se ham kisi function ko ek baar declare karwake baar baar call kar sakte hai such that woh same refernce ko point karega.
@@ -64,6 +64,7 @@ export default ExpComp
 
 //for useCallback generally if function like () the dependency array []  if (argument) the [argument]  , means same rkaho
 
+// dono ko ek hi saath ek hi function pe use karna bekar hai aisa gpt bol raha hai 
 
-
+// the code from line 19 to 32 basically checks if the function got recreated or not by comparing the refernces of the function upon rerender. as the refrence of the function changes when it is re-declared 
 

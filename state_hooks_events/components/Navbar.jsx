@@ -16,7 +16,6 @@ import Hero from "./Hero.jsx"
 //     </div>
 //   )
 // }
-
 // state hook 
 
 // const Navbar = () => {
@@ -30,6 +29,7 @@ import Hero from "./Hero.jsx"
 //     </div>
 //   )
 // }
+
 
 
 
@@ -74,6 +74,7 @@ import Hero from "./Hero.jsx"
 // }
 
 // export default Navbar
+
 
 
 

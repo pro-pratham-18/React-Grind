@@ -6,14 +6,13 @@ import Loginbtn from './components/Loginbtn'
 import Logoutbtn from './components/Logoutbtn'
 
 // image passing using props (parent)
-// const App= () => {
-//   return (
-//     <div className="p-2 bg-amber-300 ">
-//       <Navbar image={prathamesh2}/>
-//       </div>
-//   )
-// }
-
+const App= () => {
+  return (
+    <div className="p-2 bg-amber-300 ">
+      <Navbar image={prathamesh2}/>
+      </div>
+  )
+}
 
 
 // counting using props as parent-child function passing (parent)
@@ -45,6 +44,9 @@ import Logoutbtn from './components/Logoutbtn'
 
 
 // child syncing                                                 (A)
+// isme do child me same data pass krte hai , aur agar koi ek child us data ko change karta hai toh dusre vale child me bhi woh change visible hoga, provided, us data ko dusre child ne ui par show kara ho
+// jaise neeche do same child ke liye kiya hai wese alag alag child ke liye bhikar sakte hai 
+
 // const App = () => {
 //     const [name,setname]=useState('');
 //     return (
@@ -106,8 +108,6 @@ import Logoutbtn from './components/Logoutbtn'
 //             {isloggedIn && <Logoutbtn/>}
 //         </div>
 //     )
-    
-    
 
 
 // }
@@ -130,6 +130,8 @@ import Logoutbtn from './components/Logoutbtn'
 
 
 // multiple function wroking on single event happening , (if want only one function then dont write prime fucntion)
+// matlab ham koi ek event ke hone par multiple function run karwa sakte hai , ek dusra function prime aur e ka use karke
+
 // const App = () => {
 //     function handlechange(e){            // ham e(event info) function me bhi likh sakte hai , event(e.g. onchange ,onclick) me function ka naam(e.g. handleclick,handlechange) likh kar 
 //         console.log("Itna likh diya hai tumne:",e.target.value);
@@ -171,7 +173,7 @@ import Logoutbtn from './components/Logoutbtn'
 //   )
 // }
 
-// point : using function without arrow function fornat in onclick immediately triggers that function call (even that event is not triggered)
+// point : using function without arrow function format in onclick immediately triggers that function call (even that event is not triggered)
 // example <p onClick={alert("clicked")}></p> if used like this alert message shows without evem clciking the p
 // valid for other fucntions (userdfined / built-in ) as well
 
@@ -192,10 +194,7 @@ import Logoutbtn from './components/Logoutbtn'
 //         </div>
 //         <input type="Submit" value='Change Direction' className=' text-yellow-400 bg-black ' onClick={()=>setactive(!active)} />
 //     </div>
-
-//   )
 // }
-
 
 
 

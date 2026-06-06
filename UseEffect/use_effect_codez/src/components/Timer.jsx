@@ -1,26 +1,21 @@
-import React,{useState,useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Timer = () => {
     const [count,setcount]=useState(0);
-    function upcount(){
-        setcount(count+1)
-    }
-
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setcount(prevsec=>prevsec+1)
-        }, 2000);
-
-    return () => {
-        clearInterval(intervalId);   // used for cleanup , though not getting used here 
-        console.log("stopped and cleaned");
+        const intervalid=setInterval(() => {
+            setcount(prev=>prev+1)
+        }, 1000);
+      return () => {
+        console.log("cleanup");
       }
-    },[])
-  return (
-    <div>
-        <h1>Timer:{count}</h1>
-    </div>
-  )
+    }, [])
+    
+    return (
+        <div>
+            Timer:{count}
+        </div>
+    )
 }
 
 export default Timer
