@@ -1,0 +1,5 @@
+// the setup for installing react router dom
+
+1)swithch to your wroking vite folder/directory
+2) paste "npm install react-router-dom" in the terminal ,it will get installled in the node ,modules
+3)now import this in app.jsx "import { createBrowserRouter,BrowserRouter, RouterProvider } from "react-router";"
