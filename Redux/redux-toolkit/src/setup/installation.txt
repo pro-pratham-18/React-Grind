@@ -1,7 +1,7 @@
 Follow the instructions mentioned below in order to install and setup the redux-toolkit successfully.
 
-1) run the command <<   npm install @reduxjs/toolkit  >> 
-2) run the command << npm install react-redux >>
+1) run the command <<   npm install @reduxjs/toolkit  >> in your viteproject directory
+2) run the command << npm install react-redux >>  in your viteproject directory
 
 3) create a folder named redux , create store.js inside it.
 4) import configureStore and create the store (in store.js) , by pasting following code:

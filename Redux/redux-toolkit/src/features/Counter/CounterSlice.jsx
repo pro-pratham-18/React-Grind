@@ -23,3 +23,7 @@ const counterSlice = createSlice({
 
 export const { increment, decrement, incrementByAmount,reset } = counterSlice.actions
 export default counterSlice.reducer
+
+// the reducer fucntion must be synchrounous , means it must return the result after performing the action immediately.
+// as the async operations take time ,so for them the async thunk is used
+

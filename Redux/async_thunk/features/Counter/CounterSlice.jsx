@@ -7,6 +7,9 @@ const counterSlice = createSlice({          //normal type slice
     value:0
   },
   reducers: {
+    reset:(state)=>{
+      state.value=0;
+    },
     increment: (state) => {
       state.value += 1
     },
@@ -22,5 +25,5 @@ const counterSlice = createSlice({          //normal type slice
   }
 },
 );
-export const { increment, decrement, incrementByAmount,resetcount} = counterSlice.actions
+export const { increment, decrement, incrementByAmount,resetcount,reset} = counterSlice.actions
 export default counterSlice.reducer
