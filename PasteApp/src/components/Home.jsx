@@ -9,7 +9,7 @@ const Home = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [searchParams, setSearchParams] = useSearchParams(); // Destructure useSearchParams
-  const pasteId = searchParams.get("pasteId"); // Get pasteId from the search params
+  const pasteId = searchParams.get("pasteId"); // Get pasteId from the search params , if no pasteId in the URL it stores null
   const pastes = useSelector((state) => state.paste.pastes);
   const dispatch = useDispatch();
 
@@ -22,7 +22,7 @@ const Home = () => {
         Date.now().toString(36) + Math.random().toString(36).substring(2),
       createdAt: new Date().toISOString(),
     };
-
+    
     if (pasteId) {
       // If pasteId is present, update the paste
       dispatch(updatePastes(paste));

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 import { toast } from "react-hot-toast"
 
 const initialState = {
-  pastes: localStorage.getItem("pastes")
+  pastes: localStorage.getItem("pastes")      // this means “If pastes exist in localStorage, load them. Otherwise start with an empty array.”
     ? JSON.parse(localStorage.getItem("pastes"))
     : []
 }
